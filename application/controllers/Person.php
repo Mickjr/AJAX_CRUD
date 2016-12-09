@@ -11,7 +11,10 @@ class Person extends CI_Controller {
  
     public function index()
     {
+
         $this->load->helper('url');
+        $this->load->library('session');
+        // $this->session->set_userdata('some_name', 'some_value');
         $this->load->view('person_view');
     }
  

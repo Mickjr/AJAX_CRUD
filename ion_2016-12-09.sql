@@ -1,0 +1,387 @@
+# ************************************************************
+# Sequel Pro SQL dump
+# Version 4541
+#
+# http://www.sequelpro.com/
+# https://github.com/sequelpro/sequelpro
+#
+# Host: localhost (MySQL 5.6.33)
+# Database: ion
+# Generation Time: 2016-12-09 21:13:23 +0000
+# ************************************************************
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Dump of table ci_sessions
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `ci_sessions`;
+
+CREATE TABLE `ci_sessions` (
+  `id` varchar(128) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) unsigned NOT NULL DEFAULT '0',
+  `data` blob NOT NULL,
+  KEY `ci_sessions_timestamp` (`timestamp`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `ci_sessions` WRITE;
+/*!40000 ALTER TABLE `ci_sessions` DISABLE KEYS */;
+
+INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`)
+VALUES
+	('c893d980ca6d4c366156842672017993bbd5c3db','::1',1481223849,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313232333834393B'),
+	('bf8c8de4765dc4dfdb2f43e68ed3bb330774ab45','::1',1481225030,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313232353033303B'),
+	('fe7532a6dd0b85db938c8e03d3565cbd8f23c412','::1',1481225031,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313232353033313B'),
+	('5f78ac6242cdbaf67f453dcc41a0bd6e5436e515','::1',1481225310,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313232353331303B'),
+	('dface5c220307bc99814627e807adbd71766a9fc','::1',1481225310,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313232353331303B'),
+	('364820143be72ebeec73dd4b37fc3bcb87f45dfc','::1',1481226766,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313232363736363B'),
+	('d4e9346898535a8f4214061a665f936dd14d48b6','::1',1481226767,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313232363736373B'),
+	('c6061d8c1c59a6cea3c0d18a6de50a4543c2cb7a','::1',1481231136,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313233313133363B'),
+	('b690add1fd04a1cf5d953727288e4036d7d02f81','::1',1481231136,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313233313133363B'),
+	('5e231ee41056e1f891f68614707424400260d27a','::1',1481290350,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239303335303B'),
+	('fc47878bf88d652eda50af3e8713c7d6163dcb31','::1',1481290351,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239303335313B'),
+	('d63378d976f1bf1eabff8f4be5c17a8667b5dd08','::1',1481290879,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239303837393B'),
+	('312087a6e437f9c5eefd5579d4b9e0f1d8995edb','::1',1481290879,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239303837393B'),
+	('38b8d877b6104bf53e4fc5f8ed7ae3735ad25256','::1',1481290998,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239303939383B'),
+	('0e7cb9115b6c41e36f4c70f597e708b8136b0146','::1',1481290999,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239303939393B'),
+	('f31f064df91db85790632c258fd3113cb81fbc1a','::1',1481291212,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239313231323B'),
+	('bfcf9803ddd69904040f7be4225e7c24cce5ceb2','::1',1481291213,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239313231333B'),
+	('37b714bf8384d6d0a73d04c249b0f124a2f0d436','::1',1481291638,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239313633383B'),
+	('09c61f7824191343543416fe2a9ba69a0ce593b2','::1',1481291639,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239313633393B'),
+	('e85757cb552facd9fb41731af40c9681856e458e','::1',1481292360,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239323336303B'),
+	('95beee9e942399a3c39d946d2d4868f0390c3d4c','::1',1481292361,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239323336313B'),
+	('2fea1955c593d44a461a0fb019e89472e321ddcf','::1',1481292586,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239323538363B'),
+	('7c633c6f13583e0df02bfc91409392be4b693fe0','::1',1481292586,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239323538363B'),
+	('690237434b815158d94096a5a64d9d2d294f92a1','::1',1481293201,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239333230313B'),
+	('bcd7d3e1718c7dc56e2abda466014e107f788ec4','::1',1481293201,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239333230313B'),
+	('0d2286a40e4126ed7bc405e31ddfeae2219b64a7','::1',1481295099,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239353039393B'),
+	('c772c50c7092737ff826779a6e22827917b2a0a6','::1',1481295100,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313239353130303B'),
+	('e7941810ee5b8ee89ba343906ecdd358f51cc870','::1',1481300698,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330303639383B'),
+	('87a3c3eaf18a2b3af1e74f35fae66cdf0aaee010','::1',1481300699,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330303639393B'),
+	('395a1739e5d3cb4847b3af6ff194fcc51d09b136','::1',1481301480,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330313438303B'),
+	('5707dbb18ee402918f28474a8deb457ebf0bacef','::1',1481301480,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330313438303B'),
+	('2ff784f33a42164265d8a4adc4137f0bd1379888','::1',1481303177,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330333137373B'),
+	('583f94e4d67818a6a54bb43cb11e0898766c37dd','::1',1481303178,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330333137383B'),
+	('ce44eaa7263c8bdb59b307761ed4cf7075fef41e','::1',1481303610,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330333631303B'),
+	('5754695387b869d6bbed39197f97f954ab7c5ee5','::1',1481303611,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330333631313B'),
+	('2d855647b99479b08f9e9992944e8ea329ab0d61','::1',1481307783,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330373738333B'),
+	('ff354e99d73b9ee15f1464426c697a0ce544f6c2','::1',1481307784,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330373738343B'),
+	('ef8d27808190140fb44b7be498d04af09ec98d91','::1',1481308422,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330383432323B'),
+	('b91a583df9bf9c20d2d48369959c385b890540bd','::1',1481308422,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330383432323B'),
+	('4594fb3044af4b57109cdcc45c51d007ff341980','::1',1481308859,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330383835393B'),
+	('6bbd389fb83303081bf95ada701215af4151fdda','::1',1481308859,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330383835393B'),
+	('4711278b4006224637250fc867a8d476f535d5e6','::1',1481309709,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330393730393B'),
+	('b811bf5f67c524e41bee1893bf934e85bc821fd4','::1',1481309710,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313330393731303B'),
+	('fb4cae7828a23f5c262c810e437986935a806609','::1',1481310236,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313331303233363B'),
+	('e94b234fdd2f4347c15a23f28b94975d64b8f444','::1',1481310237,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313331303233373B'),
+	('156c330134ce9096b0fdce84502eddef03c58e84','::1',1481313887,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313331333838373B'),
+	('794e8aa75af51738af8018158b68bd4103635fe4','::1',1481314662,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313331343632313B'),
+	('a72b9025cf618975162814a56d71c1378a28e257','::1',1481316508,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313331363530383B'),
+	('88ca15af201e7ef75d65369563fa8b1f2f914b62','::1',1481316618,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313331363631383B'),
+	('6992132c65f4a064b7204b45e395c7584b0f5585','::1',1481316689,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313331363638393B'),
+	('b0997387600f65a0ea8993bb211ce2af025f6649','::1',1481316799,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313331363739393B'),
+	('4355d0b0a58a6f4a9cf7c0ad5927d4d92cc56611','::1',1481317851,X'5F5F63695F6C6173745F726567656E65726174657C693A313438313331373835313B');
+
+/*!40000 ALTER TABLE `ci_sessions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table data
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `data`;
+
+CREATE TABLE `data` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `content` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `data` WRITE;
+/*!40000 ALTER TABLE `data` DISABLE KEYS */;
+
+INSERT INTO `data` (`id`, `title`, `content`, `address`, `state`)
+VALUES
+	(12,'my new title','info goes here.',NULL,NULL),
+	(18,'my new title','info goes here.',NULL,NULL),
+	(19,'my new title','info goes here.',NULL,NULL),
+	(20,'my new title','info goes here.',NULL,NULL),
+	(21,'My New Title 2','IGH',NULL,NULL),
+	(22,'my new title','info goes here.',NULL,NULL),
+	(23,'my new title','info goes here.',NULL,NULL),
+	(24,'my new title','info goes here.',NULL,NULL),
+	(25,'my new title','info goes here.',NULL,NULL),
+	(26,'MNT','UIGH',NULL,NULL),
+	(27,'my new title','info goes here.',NULL,NULL),
+	(28,'my new title','info goes here.',NULL,NULL),
+	(29,'Brand New Tittle','info goes here.',NULL,NULL),
+	(30,'my new title','Information is Here.',NULL,NULL),
+	(31,'my new title','info goes here.',NULL,NULL),
+	(32,'my new title','info goes here.',NULL,NULL),
+	(33,'my new title','info goes here.',NULL,NULL),
+	(34,'my new title','info goes here.',NULL,NULL),
+	(35,'my new title','info goes here.',NULL,NULL),
+	(36,'my new title','info goes here.',NULL,NULL),
+	(37,'my new title','info goes here.',NULL,NULL),
+	(38,'my new title','info goes here.',NULL,NULL),
+	(39,'my new title','info goes here.',NULL,NULL),
+	(40,'my new title','info goes here.',NULL,NULL),
+	(41,'my new title','info goes here.',NULL,NULL),
+	(42,'my new title','info goes here.',NULL,NULL),
+	(55,'my new title','info goes here.',NULL,NULL),
+	(56,'my new title','info goes here.',NULL,NULL),
+	(57,'my new title','info goes here.',NULL,NULL),
+	(58,'my new title','info goes here.',NULL,NULL),
+	(59,'my new title','info goes here.',NULL,NULL),
+	(60,'my new title','info goes here.',NULL,NULL);
+
+/*!40000 ALTER TABLE `data` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table groups
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `groups`;
+
+CREATE TABLE `groups` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `groups` WRITE;
+/*!40000 ALTER TABLE `groups` DISABLE KEYS */;
+
+INSERT INTO `groups` (`id`, `name`, `description`)
+VALUES
+	(1,'admin','Administrator'),
+	(2,'members','General User');
+
+/*!40000 ALTER TABLE `groups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table languages
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `languages`;
+
+CREATE TABLE `languages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `language_name` varchar(100) NOT NULL,
+  `language_directory` varchar(100) NOT NULL,
+  `slug` varchar(10) NOT NULL,
+  `language_code` varchar(20) DEFAULT NULL,
+  `default` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+
+# Dump of table login_attempts
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `login_attempts`;
+
+CREATE TABLE `login_attempts` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ip_address` varchar(15) NOT NULL,
+  `login` varchar(100) NOT NULL,
+  `time` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+# Dump of table persons
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `persons`;
+
+CREATE TABLE `persons` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(100) DEFAULT NULL,
+  `lastName` varchar(100) DEFAULT NULL,
+  `gender` enum('male','female') DEFAULT NULL,
+  `address` varchar(200) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `persons` WRITE;
+/*!40000 ALTER TABLE `persons` DISABLE KEYS */;
+
+INSERT INTO `persons` (`id`, `firstName`, `lastName`, `gender`, `address`, `dob`)
+VALUES
+	(1,'Airi','Satou','female','Tokyo','1964-03-04'),
+	(2,'Garrett','Winters','male','Tokyo','1988-09-02'),
+	(3,'John','Doe','male','Kansas','1972-11-02'),
+	(4,'Tatyana','Fitzpatrick','male','London','1989-01-01'),
+	(5,'Quinn','Flynn','male','Edinburgh','1977-03-24'),
+	(6,'Manton','Horton','male','704 Easter St.','2016-11-30'),
+	(7,'Manton','Horton','male','704 Easter St.','2016-11-30'),
+	(8,'Manton','Horton','male','704 Easter St.','2016-11-30'),
+	(9,'Manton','Horton','male','704 Easter St.','2016-11-30'),
+	(10,'Manton','Horton','male','704 Easter St.','2016-11-30'),
+	(11,'Manton','Horton','male','704 Easter St.','2016-11-30'),
+	(12,'Manton','Horton Jr.','male','504 Yekcim Rd.','2016-11-30');
+
+/*!40000 ALTER TABLE `persons` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table skills
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `skills`;
+
+CREATE TABLE `skills` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `skill` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `something` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `dob` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+LOCK TABLES `skills` WRITE;
+/*!40000 ALTER TABLE `skills` DISABLE KEYS */;
+
+INSERT INTO `skills` (`id`, `skill`, `something`, `dob`)
+VALUES
+	(1,'ActionScript','ok',NULL),
+	(2,'AppleScript','cad',NULL),
+	(3,'Asp','sa vad',NULL),
+	(4,'BASIC',' dav ',NULL),
+	(5,'C','dv vds ',NULL),
+	(6,'C++','',NULL),
+	(7,'Clojure','',NULL),
+	(8,'COBOL','',NULL),
+	(9,'ColdFusion','dv a',NULL),
+	(10,'Erlang','',NULL),
+	(11,'Fortran','',NULL),
+	(12,'Groovy','',NULL),
+	(13,'Haskell','',NULL),
+	(14,'Java','',NULL),
+	(15,'JavaScript','',NULL),
+	(16,'Lisp','',NULL),
+	(17,'MySQL','',NULL),
+	(18,'Oracle','',NULL),
+	(19,'Perl','',NULL),
+	(20,'PHP','',NULL),
+	(21,'Python','',NULL),
+	(22,'Ruby','',NULL),
+	(23,'Scala','',NULL),
+	(24,'Scheme','',NULL),
+	(25,'SQL','',NULL);
+
+/*!40000 ALTER TABLE `skills` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table users
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `users`;
+
+CREATE TABLE `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ip_address` varchar(45) NOT NULL,
+  `username` varchar(100) DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `salt` varchar(255) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `activation_code` varchar(40) DEFAULT NULL,
+  `forgotten_password_code` varchar(40) DEFAULT NULL,
+  `forgotten_password_time` int(11) unsigned DEFAULT NULL,
+  `remember_code` varchar(40) DEFAULT NULL,
+  `created_on` int(11) unsigned NOT NULL,
+  `last_login` int(11) unsigned DEFAULT NULL,
+  `active` tinyint(1) unsigned DEFAULT NULL,
+  `first_name` varchar(50) DEFAULT NULL,
+  `last_name` varchar(50) DEFAULT NULL,
+  `company` varchar(100) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+
+INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`)
+VALUES
+	(1,'127.0.0.1','administrator','$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36','','admin@admin.com','',NULL,NULL,NULL,1268889823,1481117709,1,'Admin','istrator','ADMIN','0'),
+	(2,'::1','mhorton','$2y$08$nfRX/w.VQ6tAgK0GvX2lUOcJ67/9B1yaCof026Yc42f0icfylYFxW',NULL,'mantonhorton@gmail.com',NULL,NULL,NULL,NULL,1478109825,1481117364,1,'Manton','Horton Jr.','',''),
+	(3,'::1','yekcim','$2y$08$.IGrDJ.sSx8ra59l7fSrM.RHLxdt98zlSbapBPTxshIYuTNy9WGiq',NULL,'mantonho@gmail.com',NULL,NULL,NULL,NULL,1478721177,NULL,1,'Yekcim','Notroh','why','1234567895'),
+	(4,'::1','sgvfrbB','$2y$08$4X1IzmmDOCkHbYZEfQEg4OvQiIxu/fF9L5/q1goHe7D5hFD1nd6kK',NULL,'yekcim23@r.com',NULL,NULL,NULL,NULL,1478721669,NULL,1,'kasjbng','gabgbhad','gnadgngafgn','4566322'),
+	(5,'::1','holmes','$2y$08$eocSQrLtOaOFu73vw8MjLOtBkYELQz3CPo7JLrWnvKwb4g7Zn/qMK',NULL,'trya@gmail.com',NULL,NULL,NULL,NULL,1478722034,NULL,1,'tret','yetr','qhutr','4566322'),
+	(6,'::1','WhyNot','$2y$08$xrQamQN0BeMhu98WWRt6r.U1KcO3d4Mo09XcD8pIe.X51XoMQ.6uK',NULL,'youtoo@gmail.com',NULL,NULL,NULL,NULL,1478722433,NULL,1,'read','Abook','Billy Graham','4566322'),
+	(7,'::1','WhyNot2','$2y$08$NW9Tcsx2Un9eKIt.pn8SVe6silE0cW04yEOS9ZWcuUUQyW180PYlq',NULL,'ret@scom.com',NULL,NULL,NULL,NULL,1478722506,NULL,1,'read','Abook','Billy Graham','4566322'),
+	(8,'::1','WhyNot5','$2y$08$2XF6zgVYYbIh/qMFuLXe2Of7jOOzgoNBOCM1yIUwhCZzp8x04jZG.',NULL,'yet7@gmail.com',NULL,NULL,NULL,NULL,1478722830,NULL,1,'read','Abook','Billy Graham','4566322'),
+	(9,'::1','WhyNot7','$2y$08$oLNTjCeOQ/BrIKUTjRqtle8Ra.im.ljl/2Nr3CK59Aadf/RAefG9C',NULL,'tony@gmail.com',NULL,NULL,NULL,NULL,1478723023,NULL,1,'read','Abook','Billy Graham','4566322'),
+	(10,'::1','holmes5','$2y$08$q7.o0J9.jdZPjQYLJRU79uG9HrD6ArgIrFTMw8j6idrH7e6vXr6pm',NULL,'hjsdgvhsg@f.com',NULL,NULL,NULL,NULL,1478723269,NULL,1,'tret','yetr','qhutr','4566322'),
+	(11,'::1','Test','$2y$08$OY7/GIS9oSRuXO1tNpidiuOKkzEC13eSesdik2LfD5stMaffNB3Z2',NULL,'test@gmail.com',NULL,NULL,NULL,NULL,1478725206,1478726268,1,'Test','Test','Test','3212367894');
+
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table users_groups
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `users_groups`;
+
+CREATE TABLE `users_groups` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) unsigned NOT NULL,
+  `group_id` mediumint(8) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uc_users_groups` (`user_id`,`group_id`),
+  KEY `fk_users_groups_users1_idx` (`user_id`),
+  KEY `fk_users_groups_groups1_idx` (`group_id`),
+  CONSTRAINT `fk_users_groups_groups1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  CONSTRAINT `fk_users_groups_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `users_groups` WRITE;
+/*!40000 ALTER TABLE `users_groups` DISABLE KEYS */;
+
+INSERT INTO `users_groups` (`id`, `user_id`, `group_id`)
+VALUES
+	(1,1,1),
+	(2,1,2),
+	(3,2,2),
+	(4,3,2),
+	(5,4,2),
+	(6,5,1),
+	(7,6,2),
+	(8,7,2),
+	(9,8,2),
+	(10,9,2),
+	(11,10,2),
+	(12,11,2);
+
+/*!40000 ALTER TABLE `users_groups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
