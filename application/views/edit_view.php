@@ -18,15 +18,43 @@
 <body>
  
     <div class="container">
-        <h1 style="font-size:20pt">Ajax CRUD with Bootstrap modals and Datatables</h1>
+       <!--  <h1 style="font-size:20pt">Ajax CRUD with Bootstrap modals and Datatables</h1> -->
  
-        <form>
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Edit Data</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="requestSkill">Skills</label>  
+  <div class="col-md-4">
+  <input id="requestSkill" name="requestName" placeholder="skill" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="something">Something</label>  
+  <div class="col-md-5">
+  <input id="something" name="something" placeholder="something" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
 
 
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="submit" class="btn btn-default">Edit</button>
+  </div>
+</div>
 
-
-
-        </form>
+</fieldset>
+</form>
 
 
 
